@@ -16,7 +16,8 @@ class MovieList extends Component {
                     keyExtractor={(movie) => movie.id}
                     renderItem={(movieItem) => <MovieCard {...movieItem.item} loadProfile={ () =>{ 
                         navigate('MovieProfile', movieItem.item);
-                    }}/>} 
+                    }}/>}
+                    onRefresh={screenProps.loadMore}
                     onEndReached={screenProps.loadMore}
                     onEndReachedThreshold={0.1}
                     refreshing={screenProps.loading}
