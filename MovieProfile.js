@@ -7,7 +7,7 @@ class MovieProfile extends Component {
     render() {
         const props = this.props.navigation.state.params;
         const img = {
-            uri: `https://image.tmdb.org/t/p/w1000_and_h563_bestv2/${this.props.poster_path}`
+            uri: `https://image.tmdb.org/t/p/w1000_and_h563_bestv2/${props.backdrop_path}`
         };
 
         return (
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         flexWrap: 'nowrap',
-        width: 300,
+        width: 400,
         height: 600
     },
     textContainer: {
